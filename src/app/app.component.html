@@ -1,0 +1,14 @@
+<div class="App">
+  <div class="todo-wrapper">
+    <div class="app">ADD ITEM </div> <hr> 
+    <app-todo-input></app-todo-input> <!--Adding items to the list-->
+    <div class="app">TODO </div> <hr>
+    <div *ngFor="let todo of todoService.getTodos()">
+      <app-todo-item [todo]="todo"></app-todo-item> <!--TODO list-->
+    </div>
+    <div class="app">COMPLETED </div> <hr>
+    <div *ngFor="let completedtodo of todoService.getcompletedTodos()">
+      <app-completed-item [completedtodo]="completedtodo"></app-completed-item> <!--Completed items list-->
+    </div>
+  </div>
+</div>

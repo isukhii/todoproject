@@ -1,0 +1,6 @@
+<div class="todoWrapper">
+  <input type="checkbox" class="removeTodo" (click)="incomplete()" checked> 
+  <input type="text" [ngClass]="{inputbox: shouldShow, inputbox1: !shouldShow}" [(ngModel)]= "completedtodo.text" value={{completedtodo.text}} [attr.disabled]="disabled ? 'enabled' : null" (focusout)="disabling()" />
+  <button class="btn btn-primary" (click)="editTodo()">Edit</button>
+  <button class="btn btn-primary" (click)="deletetodo()">Delete</button>
+</div>
